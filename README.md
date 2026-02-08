@@ -1,6 +1,6 @@
-# BertPCa: A Transformer-based Survival Analysis for Prostate Cancer Post-Surgical Outcomes
+# BertPCa: Transformer-based Dynamic Survival Analysis for Prostate Cancer Post-Surgical Outcomes
 
-A deep learning framework for survival analysis using transformer architectures and Weibull distributions, designed for prostate cancer post-surgical outcomes and applicable to other time-to-event outcomes.
+BertPCa is a dynamic survival analysis model that uses transformer architectures and Weibull distributions, designed to predict prostate cancer post-surgical biochemical recurrence and cancer-specific mortality. Despite this being the main target during development, BertPCa is quite flexible and can be used with other time-varying time-to-event datasets, as demonstrated here with the PBC2 dataset
 
 
 ## Installation
