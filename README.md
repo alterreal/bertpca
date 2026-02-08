@@ -27,13 +27,13 @@ A deep learning framework for survival analysis using transformer architectures 
 Train with the default configuration (paths and options in `config/config.yaml`):
 
 ```bash
-python scripts/train_bertpca.py
+uv run python scripts/train_bertpca.py
 ```
 
 Save the best model to a specific path:
 
 ```bash
-python scripts/train_bertpca.py --output outputs/models/my_model.keras
+uv run python scripts/train_bertpca.py --output outputs/models/my_model.keras
 ```
 
 ### Hyperparameter tuning
@@ -41,13 +41,13 @@ python scripts/train_bertpca.py --output outputs/models/my_model.keras
 Run Optuna optimization (default number of trials from config):
 
 ```bash
-python scripts/tune_bertpca.py
+uv run python scripts/tune_bertpca.py
 ```
 
 Customize trials and study name:
 
 ```bash
-python scripts/tune_bertpca.py --n-trials 100 --study-name my_study
+uv run python scripts/tune_bertpca.py --n-trials 100 --study-name my_study
 ```
 
 Results and optimization log are written to `outputs/results/`.
