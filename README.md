@@ -1,6 +1,14 @@
 # BertPCa: Transformer-based Dynamic Survival Analysis for Prostate Cancer Post-Surgical Outcomes
 
-BertPCa is a dynamic survival analysis model that uses transformer architectures and Weibull distributions, designed to predict prostate cancer post-surgical biochemical recurrence and cancer-specific mortality. Despite this being the main target during development, BertPCa is quite flexible and can be used with other time-varying time-to-event datasets, as demonstrated here with the PBC2 dataset
+🤖 BertPCa is a dynamic survival analysis model built on transformer architectures and Weibull distributions. It was originally developed to predict post-surgical biochemical recurrence and cancer-specific mortality in prostate cancer patients.
+
+💡 Want to use BertPCa outside prostate cancer? No problem! BertPCa is highly flexible and can be applied to any longitudinal time-to-event dataset. To demonstrate this, we include the [PBC2 dataset](https://search.r-project.org/CRAN/refmans/DynForest/html/pbc2.html) in this repository, allowing you to train and evaluate the model on a non-oncological use case.
+
+🚀 BertPCa leverages all available patient data up to the time of prediction, continuously updating risk estimates as new information becomes available.
+
+🔎 Let's take a closer look: right after surgery, BertPCa predicted a relatively low 10-year cumulative risk of biochemical recurrence for a patient with ISUP grade group 5, but no positive lymph nodes or seminal vesicle invasion. As follow-up PSA measurements were incorporated over the next 18 months, the model progressively revised and increased its risk estimate.
+
+![Prediction Example](figures/prediction_example.png)
 
 
 ## Installation
@@ -54,6 +62,8 @@ Results and optimization log are written to `outputs/results/`.
 
 
 ## Model Architecture
+
+![Model architecture](figures/architecture.svg)
 
 1. **Input**: Static features (repeated across time) and dynamic features arranged in padded sequences of length `seq_length`.
 2. **Transformer encoder**: Multi-head self-attention layers for sequence modeling.
