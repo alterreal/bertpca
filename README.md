@@ -63,13 +63,13 @@ Results and optimization log are written to `outputs/results/`.
 
 ## Model Architecture
 
-![Model architecture](figures/architecture.svg)
-
 1. **Input**: Static features (repeated across time) and dynamic features arranged in padded sequences of length `seq_length`.
 2. **Transformer encoder**: Multi-head self-attention layers for sequence modeling.
 3. **Convolutional blocks**: 1D convolutions with pooling for local feature extraction.
 4. **Dense stack**: Fully connected layers.
 5. **Weibull head**: Two outputs (alpha, beta) parameterizing the Weibull survival distribution.
+
+![Model architecture](figures/architecture.svg)
 
 ## Evaluation Metrics
 
